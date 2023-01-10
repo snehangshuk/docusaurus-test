@@ -1,0 +1,29 @@
+span.nameOnly {
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.person {
+  width: 300px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.person img {
+  width: 100%;
+}
+
+.person h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.person p {
+  margin: 10px;
+}
