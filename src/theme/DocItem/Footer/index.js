@@ -1,16 +1,11 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 import React from 'react';
 import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import {useDoc} from '@docusaurus/theme-common/internal';
 import LastUpdated from '@theme/LastUpdated';
 import EditThisPage from '@theme/EditThisPage';
 import TagsListInline from '@theme/TagsListInline';
 import styles from './styles.module.css';
-import {ThemeClassNames} from '@docusaurus/theme-common';
 import Feedback from '../../../components/Feedback';
 
 function TagsRow(props) {
@@ -26,7 +21,6 @@ function TagsRow(props) {
     </div>
   );
 }
-
 function EditMetaRow({
   editUrl,
   lastUpdatedAt,
@@ -49,23 +43,19 @@ function EditMetaRow({
     </div>
   );
 }
-
-export default function DocItemFooter(props) {
-  const {content: DocContent} = props;
-  const {metadata} = DocContent;
+export default function DocItemFooter() {
+  const {metadata} = useDoc();
   const {editUrl, lastUpdatedAt, formattedLastUpdatedAt, lastUpdatedBy, tags, unversionedId} =
     metadata;
   const canDisplayTagsRow = tags.length > 0;
   const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
   const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
-
   if (!canDisplayFooter) {
     return null;
   }
-
   return (
-  <>	  
-    <Feedback resource={unversionedId} />	  
+    <>
+    <Feedback resource={unversionedId} />
     <footer
       className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
       {canDisplayTagsRow && <TagsRow tags={tags} />}
@@ -78,6 +68,6 @@ export default function DocItemFooter(props) {
         />
       )}
     </footer>
-  </>	  
+    </>
   );
 }
