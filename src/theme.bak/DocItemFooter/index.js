@@ -11,7 +11,7 @@ import EditThisPage from '@theme/EditThisPage';
 import TagsListInline from '@theme/TagsListInline';
 import styles from './styles.module.css';
 import {ThemeClassNames} from '@docusaurus/theme-common';
-import Feedback from '../../../components/Feedback';
+import Feedback from '../../components/Feedback';
 
 function TagsRow(props) {
   return (
