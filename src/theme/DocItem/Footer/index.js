@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import {ThemeClassNames} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/theme-common/internal';
+import { ThemeClassNames } from '@docusaurus/theme-common';
+import { useDoc } from '@docusaurus/theme-common/internal';
 import LastUpdated from '@theme/LastUpdated';
 import EditThisPage from '@theme/EditThisPage';
 import TagsListInline from '@theme/TagsListInline';
@@ -13,8 +13,9 @@ function TagsRow(props) {
     <div
       className={clsx(
         ThemeClassNames.docs.docFooterTagsRow,
-        'row margin-bottom--sm',
-      )}>
+        'row margin-bottom--sm'
+      )}
+    >
       <div className="col">
         <TagsListInline {...props} />
       </div>
@@ -44,9 +45,15 @@ function EditMetaRow({
   );
 }
 export default function DocItemFooter() {
-  const {metadata} = useDoc();
-  const {editUrl, lastUpdatedAt, formattedLastUpdatedAt, lastUpdatedBy, tags, unversionedId} =
-    metadata;
+  const { metadata } = useDoc();
+  const {
+    editUrl,
+    lastUpdatedAt,
+    formattedLastUpdatedAt,
+    lastUpdatedBy,
+    tags,
+    unversionedId,
+  } = metadata;
   const canDisplayTagsRow = tags.length > 0;
   const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
   const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
@@ -55,19 +62,20 @@ export default function DocItemFooter() {
   }
   return (
     <>
-    <Feedback resource={unversionedId} />
-    <footer
-      className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
-      {canDisplayTagsRow && <TagsRow tags={tags} />}
-      {canDisplayEditMetaRow && (
-        <EditMetaRow
-          editUrl={editUrl}
-          lastUpdatedAt={lastUpdatedAt}
-          lastUpdatedBy={lastUpdatedBy}
-          formattedLastUpdatedAt={formattedLastUpdatedAt}
-        />
-      )}
-    </footer>
+      <Feedback resource={unversionedId} />
+      <footer
+        className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}
+      >
+        {canDisplayTagsRow && <TagsRow tags={tags} />}
+        {canDisplayEditMetaRow && (
+          <EditMetaRow
+            editUrl={editUrl}
+            lastUpdatedAt={lastUpdatedAt}
+            lastUpdatedBy={lastUpdatedBy}
+            formattedLastUpdatedAt={formattedLastUpdatedAt}
+          />
+        )}
+      </footer>
     </>
   );
 }
