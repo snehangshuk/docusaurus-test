@@ -13,6 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
+  staticDirectories: ['static', 'public'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -38,7 +39,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',  
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,12 +58,12 @@ const config = {
           src: 'img/logo.svg',
         },**/
         items: [
-          {
+          /*{
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Tutorial',
-          },
+          },*/
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
