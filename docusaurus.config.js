@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Using Docusaurus and Its Cool Features',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/docs/intro/',
+  url: 'https://githubjebetw-li0d--3000.local-credentialless.webcontainer.io',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
@@ -20,7 +20,7 @@ const config = {
   projectName: 'docusaurus-test', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
+  // metadata like html lang. For example, if your site is Chineseyou may want
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',

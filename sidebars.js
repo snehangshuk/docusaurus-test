@@ -34,7 +34,7 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'Guides',
+      label: 'Docs Wiki',
       link: {type: 'doc', id: 'intro'},
       items: ['tutorial-basics/congratulations', 'tutorial-basics/create-a-blog-post', 'tutorial-basics/create-a-document'],
     },
