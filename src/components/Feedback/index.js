@@ -1,6 +1,6 @@
 // src/components/Feedback/index.js
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 export default function Feedback({ resource }) {
   if (!ExecutionEnvironment.canUseDOM) {
@@ -8,7 +8,7 @@ export default function Feedback({ resource }) {
   }
 
   const [haveVoted, setHaveVoted] = useState(false);
-  const giveFeedback = value => {
+  const giveFeedback = (value) => {
     if (window.ga) {
       window.ga('send', {
         hitType: 'event',
@@ -23,17 +23,16 @@ export default function Feedback({ resource }) {
 
   return (
     <div className="docsRating">
+      <hr />
       {haveVoted ? (
         'Thanks for letting us know!'
       ) : (
         <>
-	  <hr/>     
-	  <h3>Is this page useful?</h3>
-	  <button onClick={() => giveFeedback(1)}>Great!</button> &nbsp;&nbsp;
-	  <button onClick={() => giveFeedback(0)}>Not that great!</button>    
+          <h3>Is this page useful?</h3>
+          <button onClick={() => giveFeedback(1)}>Great!</button> &nbsp;&nbsp;
+          <button onClick={() => giveFeedback(0)}>Not that great!</button>
         </>
       )}
     </div>
   );
 }
-
