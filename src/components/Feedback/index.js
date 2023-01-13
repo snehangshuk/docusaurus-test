@@ -29,7 +29,7 @@ export default function Feedback({ resource }) {
         <>
 	  <hr/>     
 	  <h3>Is this page useful?</h3>
-	  <button onClick={() => giveFeedback(1)}>Great!</button>    
+	  <button onClick={() => giveFeedback(1)}>Great!</button> &nbsp;&nbsp;
 	  <button onClick={() => giveFeedback(0)}>Not that great!</button>    
         </>
       )}
