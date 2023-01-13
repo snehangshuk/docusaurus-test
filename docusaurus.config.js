@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Using Docusaurus and its Cool Features',
+  title: 'Using Docusaurus and its  Cool Features',
   tagline: 'Dinosaurs are cool',
   url: 'https://snehangshuk.github.io/',
   baseUrl: '/docs/',
