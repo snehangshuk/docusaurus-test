@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Using Docusaurus and Its Cool Features',
   tagline: 'Dinosaurs are cool',
-  url: 'https://githubjebetw-li0d--3000.local-credentialless.webcontainer.io',
+  url: 'https://snehangshuk.github.io/',
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
