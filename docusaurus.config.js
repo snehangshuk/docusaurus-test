@@ -9,7 +9,7 @@ const config = {
   title: 'Using Docusaurus and its  Cool Features',
   tagline: 'Dinosaurs are cool',
   url: 'https://snehangshuk.github.io/',
-  baseUrl: '/docs/',
+  baseUrl: '/docusaurus-test/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
