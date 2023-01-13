@@ -1,0 +1,70 @@
+---
+sidebar_label: Admonition
+sidebar_position: 1
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Admonitions
+
+Call-out admonitions allow you to highlight parts of the documentation which require special attention or which
+don't fit in the usual flow of content.
+
+```markdown
+:::note
+
+**This** is an example of a call-out admonition. For more info please get in touch with us on [Slack](https://slack.gg/vBPpJkS).
+
+:::
+```
+
+```markdown
+:::note Additional Resources
+
+Enroll in the Multiproduct Development at LinkedIn course - [Enroll Here](https://go/engu).
+
+:::
+```
+
+:::caution Please note the empty lines
+
+Please ensure to leave empty lines in the start and the end (first and last lines). This to avoid prettier messing
+up the formatting in this Docusaurus special syntax.
+
+Read about it on the [Docusaurus Docs](https://docusaurus.io/docs/markdown-features/admonitions#usage-with-prettier)
+
+:::
+
+```diff {1,3,5,7}
++
+:::info Note
++
+Make sure to place the note/admonition in a place where the user will see it at the appropriate time.
++
+:::
++
+```
+The above will be redendered as follows:
+
+:::note
+
+**This** is an example of a call-out admonition. For more info please get in touch with us on [Slack](https://slack.gg/vBPpJkS).
+
+:::
+
+:::note Additional Resources
+
+Enroll in the Multiproduct Development at LinkedIn course - [Enroll Here](https://go/engu).
+
+:::
+
+<hr />
+
+Please prefer `:::info Note` over `:::note` for a decent blue colored note.
+
+:::info Note
+
+For further syntax and usage reference please check docusaurus
+[Admonitions docs](https://docusaurus.io/docs/markdown-features/admonitions)
+
+:::

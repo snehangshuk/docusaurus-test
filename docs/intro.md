@@ -1,47 +1,38 @@
 ---
+sidebar_label: Introduction
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# Get Started with Documentation
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## What is good documentation?
+Good documentation uses clear, simple, effective communication to explain the usage and workings of a product as completely as possible.
 
-## Getting Started
+Documentation is critically important. It's our most visited web property and engineers looks forward to solve a problem without good, thorough documentation, engineers can not use, or increase thier productivity.
 
-Get started by **creating a new site**.
+:::danger THE RULE
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+If a tool/product feature doesn’t have excellent feature and reference documentation then it is not a finished feature.
 
-### What you'll need
+:::
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Good documentation is vital to the health of a company's engineering team. Engineers often discover new features and automate things based on information they find in documentation.
 
-## Generate a new site
+Every engineer is responsible for creating and continually improving the documentation.
 
-Generate a new Docusaurus site using the **classic template**.
+Your task is to create rich, correct documentation content which fully covers the feature being referenced in a user-obsessed, complete and compelling way.
 
-The classic template will automatically be added to your project after you run the command:
+## Types of documentation
+To create quality, rich content in four logical areas of documentation including:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+* Explanation
+* Task guides
+* Tutorials
+* Reference
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Engineers must have a task to consider which of these types of documentation fits the user requirement most for the feature they are documenting it. Maybe it's two or three, maybe it's all of them.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## Next Steps..
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Here are some of my learnings to enhance the quality of documenation using Docusaurus. Navigate each card to learn more.

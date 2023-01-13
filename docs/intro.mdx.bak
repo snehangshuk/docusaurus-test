@@ -1,0 +1,63 @@
+---
+slug: /
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import TOCInline from '@theme/TOCInline';
+import Person from '../src/components/PeopleCard';
+import DocusaurusImageUrl from '@site/static/img/docusaurus.png'
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+
+export const Thing = () => <>World</>
+
+## Hello <Thing />
+
+### Example of using Tabs
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+function helloWorld() {
+  console.log('Hello, world!');
+}
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+def hello_world():
+  print("Hello, world!")
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+class HelloWorld {
+  public static void main(String args[]) {
+    System.out.println("Hello, World");
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+#### Heading 4
+##### Heading 5
+
+<!--<TOCInline toc={toc} />-->
+<TOCInline
+// Only show h2 and h4 headings
+  toc={toc.filter((node) => node.level === 2 || node.level === 4)}
+  minHeadingLevel={2}
+  // Show h4 headings in addition to the default h2 and h3 headings
+  maxHeadingLevel={4}
+/>
+
+### People Card
+
+<Person first="Snehangshu" last="Karmakar" image={DocusaurusImageUrl} notes= "Instructional Engineer" />
