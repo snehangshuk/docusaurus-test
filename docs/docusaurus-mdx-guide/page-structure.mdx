@@ -1,0 +1,134 @@
+---
+sidebar_label: Page Structure
+sidebar_position: 0
+---
+
+import Person from '@site/src/components/PeopleCard';
+import DocusaurusImageUrl from '@site/static/img/docusaurus.png';
+
+# Docs Page Structure
+
+## Meta information
+
+The following meta information should be added at the beginning of each docs page: `description` and `tags`.
+
+An example:
+
+```markdown
+---
+description: How to use EngX
+tags:
+  - engx
+  - frontend
+  - developer productivity
+---
+```
+
+## How to organize the docs
+
+Read more about organizing content under `docs` directory at [Organizing folder structure](https://docusaurus.io/docs/create-doc#organizing-folder-structure) in Docusaurus documentation.
+
+Every document has a unique `id`. By default, a document `id` is the name of the document (without the extension) relative to the root `docs` directory.
+You can modify the `id` of a document using the `id` when defining the meta information of document.
+
+```markdown
+---
+id: my-id
+---
+```
+
+## React component imports
+
+Add any React component imports right below the frontmatter and before starting the main doc content. Before using a component be sure to know the [prop](https://reactjs.org/docs/components-and-props.html) required to use the component. 
+
+:::danger SAVE THE FILE AS MDX
+
+It is important to savve the file as MDX when using React components.
+
+:::
+
+### Using a React component
+
+Here is a example to use a react component in Docusaurus. The `PeopleCard` component uses the following props: `first`, `last`, `image`, and `notes`
+```jsx
+import Person from '@site/src/components/PeopleCard';
+import DocusaurusImageUrl from '@site/static/img/docusaurus.png'
+
+...
+<Person first="Snehangshu" last="Karmakar" image={DocusaurusImageUrl} notes= "Instructional Engineer" />
+...
+```
+
+:::tip HOW TO REFERANCE A REACT COMPONENT?
+
+When importing components from `src/` directory, please do not use relative paths. Docusaurus provides a global variable `@site` which is resolved to the root of the app - absolute import. So, doing `@site/src/components/PeopleCard` is the same as `../../../src/components/PeopleCard`.
+
+:::
+
+This is how it is rendered.
+
+<Person
+  first="Snehangshu"
+  last="Karmakar"
+  image={DocusaurusImageUrl}
+  notes="Instructional Engineer"
+/>
+
+## Page title
+
+Add the main title for each docs page.
+
+An example:
+
+```
+# Using CRT
+```
+
+You can also add `title` frontmatter.
+
+```markdown
+---
+title: Using CRT
+---
+```
+
+By default the title will be the label for sidebar item. So, to use a shorten/different label for sidebar use the
+`sidebar_label` frontmatter to override.
+
+## Table of contents
+
+This is auto generated on the right sidebar. And the depth can be controlled via `toc_max_heading_level`,
+`toc_min_heading_level` frontmatter.
+
+Please refer to the [Table of Contents](/docusaurus-mdx-guide/table-of-contents) section to understand more about how to render this manually in between content and filtering items, etc.
+
+## Markdown Variables
+
+Add the markdown variables at very end of file for easier reference and maintainability. These variables are mostly for
+links. To avoid repetition of adding full path for each link, we could take advantage of
+[reference-style-links](https://daringfireball.net/projects/markdown/syntax#link) syntax in markdown.
+
+For Example:
+
+```markdown
+## Section one
+
+.....
+
+On how to use admonitions ... [Admonition][admonition-page]
+
+....
+
+## Section two
+
+.....
+
+Learn how to use [markdown variables][variables]
+
+....
+
+<!-- Shared Link Variables -->
+
+[admonition-page]: /docusaurus-mdx-guide/admonition
+[variables]: /docusaurus-mdx-guide/page-structure#markdown-variables
+```
