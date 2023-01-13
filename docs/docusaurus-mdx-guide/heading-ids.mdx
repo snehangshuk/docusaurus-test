@@ -1,0 +1,64 @@
+---
+sidebar_label: Headings and Ids
+sidebar_position: 1
+---
+
+# Defining Headings
+* Headings should use `Title Capitalization Like This`.
+* Subheadings, anything less than h1 or markdown level 1: `#`, should use `Sentence capitalization like this`.
+* Subheadings which are numbered steps to follow should start with `Step 0:`.
+* Subheadings which are numbered steps should have the first word after the colon capitalized like this: `Step 0: Do something great`.
+* Headings should not end with a period.
+* Leave a blank line above and below headings.
+* Add an introduction section as `## Introduction` with a short overview of what the page is about.
+Page titles should be self-sufficient. 
+
+Headings are defined using `h1(#) => h6(######)`
+```markdown
+# Heading 1 (h1 level)
+## Heading 2 (h2 level)
+### Heading 3 (h3 level)
+...
+####### Heading 6 (h6 level)
+```
+
+:::tip One h1 per doc
+
+There should be one only `h1(#)` per document. But there can be multiple `h2(##)=>h6(######)` in a document.
+
+:::
+
+## Heading IDs
+
+Docusaurus will by default generate an id for each heading to be able to link to individual sections.
+
+The generated id's are nothing but the `kebab-cased-heading-text-itself`.
+Example:
+```
+## Heading H2 example
+
+<!-- will have a generated id as below -->
+heading-h2-example
+```
+
+### Custom Heading IDs
+
+Docusaurus allows to define custom heading ids are well. Use the following define the custom heading id.
+
+```markdown
+My Heading {#introduction}
+```
+
+Prefer lowercase kebab-cased heading ids.
+
+### Usage of Heading IDs
+
+You can use the heading ids to create a custom table of content or use this as a link for referance. Here is an example to use as link for referance. Example:
+
+```markdown
+[Heading IDs](/docusaurus-mdx-guide/heading-ids#heading-ids)
+```
+Rendered as:<br/>
+[Heading IDs](/docusaurus-mdx-guide/heading-ids#heading-ids)
+
+Please refer to the Docusaurus docs on [Headings](https://docusaurus.io/docs/markdown-features/headings) for more insights into usage and customization.
